@@ -1,0 +1,164 @@
+---
+layout: base.njk
+title: New Orleans Commercial Roofers | Juneau Odenwald Roofing
+description: Juneau Odenwald Roofing is a licensed commercial roofing contractor located in New Orleans and serving all of southern Louisiana including Baton Rouge.
+preloadHero: 2022-12-aerial4mls-5.webp
+bodyClass: home
+featured:
+  - title: St. Roch Market
+    url: /putting-a-roof-on-historic-revitalization-in-new-orleans/
+    image: 2017-01-proj3-sample.webp
+    text: This historic building is one of New Orleans' most iconic landmarks. We removed the entire roofing system and replaced it with state of the art, long lasting metal roofing as part of the building's restoration.
+  - title: Standing Seam Roofing
+    url: /3-reasons-all-metal-roofs-are-not-created-equal/
+    image: 2017-07-standing-seam-featured.webp
+    text: The home features a standing seam roof with pre-finished Kynar covering on painted galvanized steel that we designed and installed on a new construction home in River Ridge (just outside New Orleans).
+  - title: Small Commercial
+    url: /tpo-single-ply-membrane-roofing-extend-metairie-businesses-roof-by-20-years/
+    image: 2017-09-small-com-featured.webp
+    text: We installed single ply TPO roofing on the NOMAR Building in Metairie to extend the roof life by another 20 years.
+  - title: School Project
+    url: /re-roofing-a-new-orleans-high-school-while-school-is-in-session/
+    image: 2017-09-school-prj-featured.webp
+    text: Find out how we replaced the roof and added a rooftop patio at Jesuit High School in New Orleans without disrupting campus activities.
+  - title: Hotel Roofing Project
+    url: /gallery/hotel-project/
+    image: 2017-01-proj1-sample.webp
+    text: We installed this custom blue metal roof on a hotel in New Orleans East. The roof survived the worst of Hurricane Katrina with no damage of any kind and still looks incredible today.
+  - title: Custom Slate Roofing
+    url: /the-land-rover-of-roofing-materials-slate-roofing/
+    image: 2017-02-custom-slate-roof.webp
+    text: This residential home in Audubon Park was leaking water due to an aging roof and failing moisture barrier. We fixed the damage, installed natural Vermont slate and reinstalled the client's existing ridge caps.
+homeServices:
+  - title: Commercial Roofing
+    url: /commercial-roofing/
+    image: 2022-12-aerial10mls.webp
+    text: A complete line-up of commercial roofing services, from installation to maintenance and repair. Flat roofing, metal, slate, built-up roofing, roof coatings and more.
+  - title: Residential Roofing
+    url: /residential/
+    image: 2018-07-10-1.webp
+    text: We bring the same experience we have in commercial roofing to your home, from re-roofing and repair to maintenance and more.
+  - title: Roof Repair
+    url: /maintenance-repairs/
+    image: 2015-05-new-orleans-roof.webp
+    text: A leaky roof from normal wear and tear, or more extensive damage from weather and the elements? We help you fix it fast.
+  - title: Emergency Roofing Services
+    url: /contact-us/
+    image: 2022-12-aerial2mls-4.webp
+    text: After-hours and weekend service for our commercial clients in New Orleans and Baton Rouge. Crews can be on location in a few hours to address leaks, missing shingles, flashing and decking.
+  - title: Maintenance & Inspections
+    url: /roofing-inspections/
+    image: 2022-12-aerial5mls-2.webp
+    text: Regular maintenance and inspections, commercial or residential, keep little issues from turning into major ones.
+  - title: Sheet Metal Fabrication
+    url: /sheet-metal-fabrication/
+    image: 2015-01-custom-sheet-metal-order.webp
+    text: A 6,000-square-foot fabrication shop with computer-assisted equipment makes custom sheet metal products to order, quickly and locally.
+---
+<section class="hero hero--home" style="--hero:url(/images/2022-12-aerial4mls-5.webp)">
+  <div class="wrap hero__in">
+    <p class="eyebrow">New Orleans · Baton Rouge · Statewide since 1996</p>
+    <h1>New Orleans Roofing Contractors</h1>
+    <p class="hero__lede">Commercial and residential roofing, repairs, sheet metal fabrication and more from Juneau Odenwald Roofing.</p>
+    <div class="hero__btns">
+      <a class="btn btn--lg" href="/free-estimate/">Request a free estimate</a>
+      <a class="btn btn--lg btn--outline-light" href="{{ site.phoneHref }}">Call {{ site.phone }}</a>
+    </div>
+    <ul class="trust">
+      <li><strong>Since 1996</strong> serving Louisiana</li>
+      <li><strong>Licensed</strong> &amp; fully bonded</li>
+      <li><strong>6,000 sq ft</strong> fabrication shop</li>
+      <li><strong>After-hours</strong> emergency service</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band intro">
+  <div class="wrap cols">
+    <div class="col" style="--span:7">
+      <p class="eyebrow eyebrow--dark">About Juneau Odenwald</p>
+      <h2>More than just another local Louisiana roofing contractor</h2>
+      <p>We are New Orleans roofing contractors with the experience, safety record, equipment and manpower to handle any large-scale roofing project. We're licensed and fully bonded, with offices in New Orleans, Mandeville and Baton Rouge.</p>
+      <p>We provide professional roofing services throughout Louisiana, including commercial roofing, residential roofing, roofing repairs, roof replacement and sheet metal fabrication.</p>
+      <p>Juneau Odenwald Roofing Inc. was founded in 1996. <a href="/contact-us/"><strong>Contact us</strong></a> today for a free estimate on your next roofing project.</p>
+    </div>
+    <figure class="col col-img" style="--span:5"><img src="/images/2017-02-14-2.webp" alt="Juneau Odenwald crew installing a commercial roof" width="900" height="675" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="band band--mist">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--dark center">What we do</p>
+    <h2 class="section-title">Our New Orleans &amp; Baton Rouge roofing services</h2>
+    <div class="card-grid">
+      {%- for s in homeServices %}
+      <a class="card card--link" href="{{ s.url }}">
+        <span class="card__img"><img src="/images/{{ s.image }}" alt="" loading="lazy" decoding="async"></span>
+        <span class="card__body"><h3>{{ s.title }}</h3><p>{{ s.text }}</p><span class="card__more">Learn more →</span></span>
+      </a>
+      {%- endfor %}
+    </div>
+    <p class="center"><a class="btn btn--ghost" href="/services/">See all roofing services</a></p>
+  </div>
+</section>
+
+<section class="band band--photo" style="--bg:url(/images/2022-12-aerial3mls-min-1.webp)">
+  <div class="wrap feature-cta">
+    <h2>Looking for an environmentally responsible roofing material that's beautiful and extremely durable?</h2>
+    <a class="btn btn--light" href="/engineered-slate-roofing/">Show me engineered slate roofing</a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--dark center">Our work</p>
+    <h2 class="section-title">Featured projects</h2>
+    <div class="card-grid">
+      {%- for f in featured %}
+      <a class="card card--link" href="{{ f.url }}">
+        <span class="card__img"><img src="/images/{{ f.image }}" alt="{{ f.title }}" loading="lazy" decoding="async"></span>
+        <span class="card__body"><h3>{{ f.title }}</h3><p>{{ f.text }}</p></span>
+      </a>
+      {%- endfor %}
+    </div>
+    <p class="center"><a class="btn btn--ghost" href="/gallery/">View the project gallery</a></p>
+  </div>
+</section>
+
+<section class="band band--mist">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--dark center">Why choose us</p>
+    <h2 class="section-title">More about our New Orleans roofing services</h2>
+    <p class="section-intro">Since 1996, we have served New Orleans, Baton Rouge and the state of Louisiana with residential and commercial roofing. We're also a roofing company of choice for many local general contractors, and we work to keep our reputation for professional service and our dedication to new and repeat clients.</p>
+    <div class="why">
+      <div class="why__item">
+        <h3>Decades of proven experience</h3>
+        <p>For over two decades, we've honed our experience and workmanship in commercial and residential roofing projects. We handle all types of roofing materials and projects: leaky roof repair, emergency roof repair, roof replacement, maintenance, inspections, estimates and more.</p>
+      </div>
+      <div class="why__item">
+        <h3>The equipment</h3>
+        <p>We have invested in the equipment and infrastructure to handle the biggest jobs in New Orleans, Baton Rouge and across Louisiana. We own our disposal trucks, containers, cranes and lifting equipment, and our 6,000-square-foot sheet metal fabrication facility is a one-stop shop for specialty sheet metal.</p>
+      </div>
+      <div class="why__item">
+        <h3>The expertise</h3>
+        <p>We invest in our people. We partner with some of the best-known roofing manufacturers and keep training on their materials and products, so we can be your subject matter expert on roofing types and services in Metro New Orleans.</p>
+      </div>
+    </div>
+    <div class="materials">
+      <h3>Roofing materials we handle</h3>
+      <ul class="chips">
+        <li><a href="/flat-roofing/">Flat Roofing</a></li>
+        <li><a href="/metal-roofing/">Metal Roofing</a></li>
+        <li><a href="/bur-roofing/">Built-Up Roofing (BUR)</a></li>
+        <li><a href="/tpo-roofing/">TPO Roofing</a></li>
+        <li><a href="/sbs-app-modified-bitumen-roofing/">Modified Bitumen</a></li>
+        <li>EPDM Roofing</li>
+        <li><a href="/slate-roofing/">Slate Roofing</a></li>
+        <li><a href="/tile-roofing/">Tile Roofing</a></li>
+        <li><a href="/asphalt-roofing/">Asphalt Shingle Roofing</a></li>
+        <li><a href="/roof-coatings/">Roof Coatings</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% include "partials/testimonials.njk" %}

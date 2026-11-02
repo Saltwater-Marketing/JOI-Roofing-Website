@@ -1,0 +1,15 @@
+<section class="band band--navy testimonials">
+  <div class="wrap">
+    <h2 class="section-title">What our customers are saying</h2>
+    <div class="quotes">
+      {%- for t in testimonials %}
+      <figure class="quote">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote><p>{{ t.quote }}</p></blockquote>
+        <figcaption>{% if t.logo %}<img src="/images/{{ t.logo }}" alt="" width="48" height="48" loading="lazy">{% endif %}<span>{{ t.name }}</span></figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    <p class="center"><a class="btn btn--outline-light" href="/about-us/testimonials/">Read more testimonials</a></p>
+  </div>
+</section>

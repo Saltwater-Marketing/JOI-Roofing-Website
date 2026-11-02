@@ -1,0 +1,22 @@
+---
+layout: page.njk
+title: Roofing Project Gallery
+seoTitle: Roofing Project Gallery | Juneau Odenwald Roofing
+description: Photos of commercial, historic and residential roofing projects by Juneau Odenwald Roofing in New Orleans, Metairie and across Louisiana.
+h1: Project Gallery
+lede: Commercial, historic and residential roofs we've installed and restored around New Orleans.
+hero: 2022-12-aerial9mls-5.webp
+permalink: /gallery/
+---
+<section class="band">
+  <div class="wrap">
+    <div class="card-grid">
+      {%- for p in projects %}{% if p.thumb %}
+      <a class="card card--link card--sm" href="{{ p.url }}">
+        <span class="card__img"><img src="/images/{{ p.thumb.file }}" alt="{{ p.name }}" width="{{ p.thumb.w }}" height="{{ p.thumb.h }}" loading="lazy" decoding="async"></span>
+        <span class="card__body"><h3>{{ p.name }}</h3><p>{{ p.images.length }} photos</p></span>
+      </a>
+      {%- endif %}{% endfor %}
+    </div>
+  </div>
+</section>

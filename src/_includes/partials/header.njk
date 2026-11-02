@@ -1,0 +1,34 @@
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <span>Commercial &amp; residential roofing across Louisiana since {{ site.founded }}</span>
+    <span class="topbar__right"><a href="mailto:{{ site.email }}">{{ site.email }}</a><a href="{{ site.phoneHref }}"><strong>{{ site.phone }}</strong></a></span>
+  </div>
+</div>
+<header class="header">
+  <div class="wrap header__in">
+    <a class="brand" href="/" aria-label="{{ site.name }} home">
+      <img src="/images/joi-logo-160.webp" srcset="/images/joi-logo-160.webp 1x, /images/joi-logo-320.webp 2x" width="160" height="142" alt="{{ site.name }}">
+      <span class="brand__text"><strong>Juneau Odenwald</strong><span>Roofing</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bars" aria-hidden="true"></span><span class="sr">Menu</span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav__list">
+      {%- for item in site.nav %}
+        <li class="nav__item{% if item.children %} has-sub{% endif %}{% if item | isActive(page.url) %} is-active{% endif %}">
+          <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          {%- if item.children %}
+          <button class="sub-toggle" aria-expanded="false" aria-label="Show {{ item.label }} pages"><svg viewBox="0 0 12 8" width="12" height="8" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="sub">
+            {%- for c in item.children %}<li><a href="{{ c.url }}"{% if page.url == c.url %} aria-current="page"{% endif %}>{{ c.label }}</a></li>{% endfor %}
+          </ul>
+          {%- endif %}
+        </li>
+      {%- endfor %}
+      </ul>
+      <div class="nav__cta">
+        <a class="btn btn--ghost" href="{{ site.phoneHref }}">{{ site.phone }}</a>
+        <a class="btn" href="/free-estimate/">Free Estimate</a>
+      </div>
+    </nav>
+  </div>
+</header>

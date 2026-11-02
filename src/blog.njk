@@ -1,0 +1,17 @@
+---
+layout: page.njk
+title: The Juneau Odenwald Roofing Blog
+description: "Roofing advice for New Orleans homes and businesses from Juneau Odenwald Roofing: commercial roofs, repairs, hurricane prep, slate, metal and more."
+h1: The Roofing Blog
+lede: Advice on commercial and residential roofs from our team in New Orleans.
+hero: 2022-12-aerial2mls-min-2.webp
+permalink: /blog/
+hideTestimonials: true
+---
+<section class="band">
+  <div class="wrap">
+    <div class="card-grid">
+      {%- for p in collections.posts %}{% include "partials/post-card.njk" %}{% endfor %}
+    </div>
+  </div>
+</section>

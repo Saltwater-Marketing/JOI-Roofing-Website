@@ -1,0 +1,14 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{%- if env.live -%}
+User-agent: *
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml
+{%- else -%}
+# Preview build: keep it out of search engines until launch (SITE_LIVE=true)
+User-agent: *
+Disallow: /
+{%- endif %}

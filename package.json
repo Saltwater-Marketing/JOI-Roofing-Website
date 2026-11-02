@@ -1,0 +1,13 @@
+{
+  "name": "joi-roofing-site",
+  "private": true,
+  "description": "Juneau Odenwald Roofing (joiroofing.com): Eleventy static site hosted on Netlify",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6"
+  }
+}

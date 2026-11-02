@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+<section class="hero hero--post">
+  <div class="wrap wrap--narrow hero__in">
+    <p class="crumbs"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/blog/">Blog</a></p>
+    <h1>{{ title }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | dateLong }}</time>{% if categories and categories.length %} · {{ categories | join(', ') }}{% endif %}</p>
+  </div>
+</section>
+<article class="wrap wrap--narrow prose post">
+  {%- if image %}<figure class="post__img"><img src="/images/{{ image }}" alt="" fetchpriority="high"></figure>{% endif %}
+  {{ content | safe }}
+  <aside class="post__cta">
+    <h2>Questions about your roof?</h2>
+    <p>Talk with our team about repairs, replacement or a new roof. Estimates are free.</p>
+    <p><a class="btn" href="/free-estimate/">Request a free estimate</a> <a class="btn btn--ghost" href="{{ site.phoneHref }}">Call {{ site.phone }}</a></p>
+  </aside>
+</article>
+{%- set more = [] %}
+{%- for p in collections.posts %}{% if p.url != page.url and more.length < 3 %}{% set more = (more.push(p), more) %}{% endif %}{% endfor %}
+<section class="band band--mist">
+  <div class="wrap">
+    <h2 class="section-title">More from the blog</h2>
+    <div class="card-grid">
+      {%- for p in more %}{% include "partials/post-card.njk" %}{% endfor %}
+    </div>
+  </div>
+</section>

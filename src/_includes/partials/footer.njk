@@ -1,0 +1,47 @@
+<section class="cta-band">
+  <div class="wrap cta-band__in">
+    <div>
+      <h2>Need a roofer you can count on?</h2>
+      <p>Free estimates on commercial and residential roofing, repairs and storm damage. After-hours and weekend emergency service for our commercial clients.</p>
+    </div>
+    <div class="cta-band__btns">
+      <a class="btn btn--light" href="{{ site.phoneHref }}">Call {{ site.phone }}</a>
+      <a class="btn btn--outline-light" href="/free-estimate/">Request a free estimate</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a class="footer__brand" href="/"><img src="/images/joi-logo-160.webp" width="96" height="85" alt="{{ site.name }}" loading="lazy"></a>
+      <p>Juneau Odenwald Roofing is a full service roofing contractor with corporate offices in New Orleans, Louisiana and a warehouse and fabrication shop in Elmwood, serving the Gulf Coast. We offer commercial and industrial roofing, residential roofing, roofing repairs, sheet metal fabrication and emergency service after storms.</p>
+      <p class="footer__social">{% for s in site.social %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% endfor %}</p>
+    </div>
+    <div>
+      <h2 class="footer__h">Services</h2>
+      <ul>{% for l in site.footerServices %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}<li><a href="/services/">All services</a></li></ul>
+    </div>
+    <div>
+      <h2 class="footer__h">Company</h2>
+      <ul>
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/about-us/testimonials/">Testimonials</a></li>
+        <li><a href="/gallery/">Project Gallery</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact-us/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__h">Contact</h2>
+      <address>
+        {%- for o in site.offices %}
+        <p><strong>{{ o.name }}</strong><br>{{ o.street }}<br>{{ o.city }}, {{ o.state }} {{ o.zip }}<br><a href="{{ o.phoneHref }}">{{ o.phone }}</a></p>
+        {%- endfor %}
+        <p>Fax: {{ site.fax }}<br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </address>
+    </div>
+  </div>
+  <div class="wrap footer__base">
+    <p>© {{ env.year }} {{ site.legalName }}. All rights reserved. Licensed and fully bonded.</p>
+  </div>
+</footer>

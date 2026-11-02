@@ -1,0 +1,225 @@
+# Juneau Odenwald Roofing (joiroofing.com): Netlify settings.
+# Every push to the main branch rebuilds and publishes the site.
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Set in Netlify (Site configuration > Environment variables), never here:
+  #   SITE_LIVE=true   ONLY once joiroofing.com points at Netlify: turns on tracking (GTM, GA4, Ads, Meta Pixel)
+  #                    and lets Google index the site. Without it the preview is hidden from search.
+
+# ---------- Headers ----------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# ---------- Redirects ----------
+# Every old URL either exists on the new site at the same path, or is sent somewhere sensible below.
+# Old pages retired in the rebuild (empty, broken or duplicate on the old site)
+[[redirects]]
+  from = "/services/roof-coatings"
+  to = "/roof-coatings/"
+  status = 301
+[[redirects]]
+  from = "/services/other-services"
+  to = "/services/"
+  status = 301
+[[redirects]]
+  from = "/solar-roofing"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/green-roofing"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/emergency-info"
+  to = "/contact-us/"
+  status = 301
+[[redirects]]
+  from = "/6-benefits-of-metal-roofing-ebook"
+  to = "/metal-roofing/"
+  status = 301
+[[redirects]]
+  from = "/6-benefits-of-metal-roofing-ebook/ebook-download"
+  to = "/metal-roofing/"
+  status = 301
+[[redirects]]
+  from = "/feedback"
+  to = "/contact-us/"
+  status = 301
+[[redirects]]
+  from = "/send-feedback"
+  to = "/contact-us/"
+  status = 301
+[[redirects]]
+  from = "/no-access"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/residential-gallery"
+  to = "/gallery/"
+  status = 301
+[[redirects]]
+  from = "/commercial-gallery"
+  to = "/gallery/"
+  status = 301
+[[redirects]]
+  from = "/gallery/residential"
+  to = "/gallery/"
+  status = 301
+[[redirects]]
+  from = "/estimator-tool"
+  to = "/free-estimate/"
+  status = 301
+[[redirects]]
+  from = "/apartment-complex-roof-repair"
+  to = "/apartment-roofing/"
+  status = 301
+[[redirects]]
+  from = "/the-most-common-residential-roof-problems"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/blog/ignore-your-commercial-roof-youll-soon-have-big-problems-this-summer"
+  to = "/blog/"
+  status = 301
+# The references PDF moved
+[[redirects]]
+  from = "/wp-content/uploads/2012/04/joi-references.pdf"
+  to = "/files/joi-references.pdf"
+  status = 301
+# Old /services/... addresses for service pages (WordPress redirected these too). Real pages under /services/ still load first.
+[[redirects]]
+  from = "/services/other-services/:slug"
+  to = "/:slug/"
+  status = 301
+[[redirects]]
+  from = "/services/:slug"
+  to = "/:slug/"
+  status = 301
+# Old blog paging and /blog/post-name addresses
+[[redirects]]
+  from = "/blog/page/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/blog/:slug"
+  to = "/:slug/"
+  status = 301
+# WordPress-only listing pages
+[[redirects]]
+  from = "/category/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/author/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/tag/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/feed/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/comments/feed/*"
+  to = "/"
+  status = 301
+# WordPress date archives
+[[redirects]]
+  from = "/2012/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2013/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2014/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2015/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2016/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2017/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2018/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2019/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2020/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2021/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2022/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/2023/*"
+  to = "/blog/"
+  status = 301
+# Old sitemap addresses
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap.xml"
+  status = 301
+[[redirects]]
+  from = "/wp-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+[[redirects]]
+  from = "/page-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+[[redirects]]
+  from = "/post-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+# WordPress admin and login no longer exist
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/xmlrpc.php"
+  to = "/"
+  status = 301

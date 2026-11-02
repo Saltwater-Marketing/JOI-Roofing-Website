@@ -1,0 +1,27 @@
+<form class="form" name="estimate" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="company_website">
+  <input type="hidden" name="form-name" value="estimate">
+  <input type="hidden" name="page" value="{{ page.url }}">
+  <p class="hp"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
+  <div class="form__row">
+    <label>Name<input name="name" autocomplete="name" required></label>
+    <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+  </div>
+  <div class="form__row">
+    <label>Email<input name="email" type="email" autocomplete="email" required></label>
+    <label>Property address or ZIP<input name="address" autocomplete="street-address"></label>
+  </div>
+  <label>What do you need?
+    <select name="project_type">
+      <option>Commercial roofing</option>
+      <option>Residential roofing</option>
+      <option>Roof repair or leak</option>
+      <option>Storm or emergency damage</option>
+      <option>Inspection or maintenance</option>
+      <option>Sheet metal fabrication</option>
+      <option>Something else</option>
+    </select>
+  </label>
+  <label>Tell us about the project<textarea name="message" rows="5"></textarea></label>
+  <button class="btn btn--block" type="submit">Request my free estimate</button>
+  <p class="form__note">We reply during business hours ({{ site.hours }}). For a leak or storm damage, call <a href="{{ site.phoneHref }}">{{ site.phone }}</a>.</p>
+</form>

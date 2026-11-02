@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+{%- set preloadHero = hero %}
+<section class="hero hero--page" style="--hero:url(/images/{{ hero }})">
+  <div class="wrap hero__in">
+    {%- if crumb !== false %}<p class="crumbs"><a href="/">Home</a>{% if crumbParent %} <span aria-hidden="true">/</span> <a href="{{ crumbParent.url }}">{{ crumbParent.label }}</a>{% endif %}</p>{% endif %}
+    <h1>{{ h1 or title }}</h1>
+    {%- if lede %}<p class="hero__lede">{{ lede }}</p>{% endif %}
+    <div class="hero__btns">
+      <a class="btn" href="/free-estimate/">Get a free estimate</a>
+      <a class="btn btn--outline-light" href="{{ site.phoneHref }}">Call {{ site.phone }}</a>
+    </div>
+  </div>
+</section>
+<div class="content">
+{{ content | safe }}
+</div>
+{%- if not hideTestimonials %}{% include "partials/testimonials.njk" %}{% endif %}

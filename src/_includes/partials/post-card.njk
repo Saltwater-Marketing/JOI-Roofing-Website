@@ -1,0 +1,8 @@
+<article class="card post-card">
+  {%- if p.data.image %}<a class="card__img" href="{{ p.url }}" tabindex="-1" aria-hidden="true"><img src="/images/{{ p.data.image }}" alt="" loading="lazy" decoding="async"></a>{% endif %}
+  <div class="card__body">
+    <p class="card__meta"><time datetime="{{ p.date | isoDate }}">{{ p.date | dateLong }}</time></p>
+    <h3><a href="{{ p.url }}">{{ p.data.title }}</a></h3>
+    {%- if p.data.excerpt %}<p>{{ p.data.excerpt | truncate(150) }}</p>{% endif %}
+  </div>
+</article>

@@ -1,0 +1,26 @@
+---
+layout: page.njk
+pagination:
+  data: projects
+  size: 1
+  alias: project
+permalink: "{{ project.url }}"
+hideTestimonials: true
+eleventyComputed:
+  title: "{{ project.name }}: Roofing Project Gallery"
+  h1: "{{ project.name }}"
+  description: "Photos of the {{ project.name }} roofing project by Juneau Odenwald Roofing, New Orleans roofing contractors since 1996."
+  hero: "{{ project.thumb.file if project.thumb else '2022-12-aerial9mls-5.webp' }}"
+  ogImage: "{{ project.thumb.file if project.thumb else '' }}"
+  crumbParent: { url: "/gallery/", label: "Gallery" }
+---
+<section class="band">
+  <div class="wrap">
+    <p><a href="/gallery/">← Back to the main gallery</a></p>
+    <div class="photo-grid" data-lightbox>
+      {%- for im in project.images %}
+      <a href="/images/{{ im.file }}" class="photo"><img src="/images/{{ im.file }}" alt="{{ project.name }} roofing project photo {{ loop.index }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async"></a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

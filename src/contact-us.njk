@@ -1,0 +1,39 @@
+---
+layout: page.njk
+title: Contact Us
+seoTitle: Contact Us | Juneau Odenwald Roofing
+description: Contact information for Juneau Odenwald Roofing with offices in New Orleans, Louisiana.
+h1: Contact Us
+lede: Call, email or send us the details of your project. Estimates are free.
+hero: 2022-12-aerial10mls-min-2.webp
+permalink: /contact-us/
+hideTestimonials: true
+---
+<section class="band">
+  <div class="wrap cols">
+    <div class="col" style="--span:5">
+      <h2>Talk to our team</h2>
+      <p class="big-phone"><a href="{{ site.phoneHref }}">{{ site.phone }}</a></p>
+      <p>Office hours: {{ site.hours }}<br>Fax: {{ site.fax }}<br>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p>Commercial roofing emergency after hours or on a weekend? Call the number above. Our crews can be on location within hours to limit further damage.</p>
+    </div>
+    <div class="col" style="--span:7">
+      <div class="form-card">
+        <h2>Request a free estimate</h2>
+        {% include "partials/estimate-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="band band--mist">
+  <div class="wrap cols">
+    {%- for o in site.offices %}
+    <div class="col office" style="--span:6">
+      <h2>{{ o.name }}</h2>
+      <p>{{ o.street }}<br>{{ o.city }}, {{ o.state }} {{ o.zip }}<br><a href="{{ o.phoneHref }}">{{ o.phone }}</a></p>
+      <p><a href="{{ o.directions }}" target="_blank" rel="noopener">Get driving directions</a>{% if loop.index == 2 %} · <a href="/new-orleans/">About our New Orleans office</a>{% endif %}</p>
+      <iframe class="map" src="{{ o.map }}" title="Map of the {{ o.name }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

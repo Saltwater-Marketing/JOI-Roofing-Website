@@ -1,0 +1,72 @@
+{
+  "name": "Juneau Odenwald Roofing",
+  "legalName": "Juneau Odenwald, Inc.",
+  "shortName": "JOI Roofing",
+  "url": "https://joiroofing.com",
+  "founded": "1996",
+  "phone": "(504) 733-0331",
+  "phoneHref": "tel:+15047330331",
+  "fax": "(504) 733-3880",
+  "email": "troy@joiroofing.com",
+  "hours": "Monday – Friday, 8:30 am – 5 pm",
+  "serviceArea": "New Orleans, Metairie, Kenner, the Westbank, the Northshore and Baton Rouge, across Louisiana, Mississippi and Texas",
+  "offices": [
+    {
+      "name": "Warehouse & Field Office",
+      "street": "1109 Dealers Ave",
+      "city": "New Orleans", "state": "LA", "zip": "70123",
+      "phone": "(504) 733-0331", "phoneHref": "tel:+15047330331",
+      "map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27654.021925098667!2d-90.190808!3d29.957790000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd16a07b3458087cc!2sJuneau+Odenwald+Roofing%2C+Inc.!5e0!3m2!1sen!2sus!4v1486364602076",
+      "directions": "https://www.google.com/maps/search/?api=1&query=1109+Dealers+Ave+New+Orleans+LA+70123"
+    },
+    {
+      "name": "Corporate Office",
+      "street": "201 St. Charles Avenue, Suite 2500",
+      "city": "New Orleans", "state": "LA", "zip": "70170",
+      "phone": "(504) 608-4187", "phoneHref": "tel:+15046084187",
+      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.952785042298!2d-90.07252228488707!3d29.952036681916024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a60b5c706b41%3A0xf96a5c3caabd96b3!2sPlace%20St.%20Charles%2C%20201%20St%20Charles%20Ave%20%232500%2C%20New%20Orleans%2C%20LA%2070170%2C%20USA!5e0!3m2!1sen!2sph!4v1581710248235!5m2!1sen!2sph",
+      "directions": "https://goo.gl/maps/VzcntMrXgU24BfBEA"
+    }
+  ],
+  "social": [
+    { "name": "Facebook", "url": "https://www.facebook.com/juneauodenwald/" },
+    { "name": "Houzz", "url": "https://www.houzz.com/pro/joiroofing/juneau-odenwald-inc" }
+  ],
+  "tracking": {
+    "gtm": "GTM-WWGJP8W",
+    "ga4": "G-CPQPCS2CJ0",
+    "metaPixel": "590504558002209",
+    "googleAds": "AW-925812091"
+  },
+  "nav": [
+    { "label": "Services", "url": "/services/", "children": [
+      { "label": "Commercial Roofing", "url": "/commercial-roofing/" },
+      { "label": "Flat Roofing", "url": "/flat-roofing/" },
+      { "label": "Metal Roofing", "url": "/metal-roofing/" },
+      { "label": "Sheet Metal Fabrication", "url": "/sheet-metal-fabrication/" },
+      { "label": "Roof Coatings", "url": "/roof-coatings/" },
+      { "label": "Slate Roofing", "url": "/slate-roofing/" },
+      { "label": "Maintenance & Repairs", "url": "/maintenance-repairs/" },
+      { "label": "Residential Roofing", "url": "/residential/" },
+      { "label": "Roofing Inspections", "url": "/roofing-inspections/" },
+      { "label": "Historic Roofing", "url": "/historic-roofing-new-orleans/" },
+      { "label": "All services", "url": "/services/" }
+    ]},
+    { "label": "Gallery", "url": "/gallery/" },
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "About", "url": "/about-us/", "children": [
+      { "label": "About Us", "url": "/about-us/" },
+      { "label": "New Orleans Office", "url": "/new-orleans/" },
+      { "label": "Testimonials", "url": "/about-us/testimonials/" }
+    ]},
+    { "label": "Contact", "url": "/contact-us/" }
+  ],
+  "footerServices": [
+    { "label": "Commercial Roofing", "url": "/commercial-roofing/" },
+    { "label": "Maintenance & Repairs", "url": "/maintenance-repairs/" },
+    { "label": "Leaky Roof Repair", "url": "/leaky-roof-repair/" },
+    { "label": "Residential Roofing", "url": "/residential/" },
+    { "label": "Sheet Metal Fabrication", "url": "/sheet-metal-fabrication/" },
+    { "label": "Historic Roofing New Orleans", "url": "/historic-roofing-new-orleans/" }
+  ]
+}

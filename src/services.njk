@@ -1,0 +1,37 @@
+---
+layout: page.njk
+title: Roofing Services in New Orleans & Louisiana
+seoTitle: Roofing services from Juneau Odenwald Roofing
+description: Juneau Odenwald Roofing provides a number of roofing services including commercial, industrial & residential roofing, sheet metal services and much more.
+h1: Our Services
+lede: A full service roofing contractor serving all of Louisiana. We specialize in commercial roofing and sheet metal fabrication, and offer a number of related services.
+hero: 2022-12-aerial1mls-6.webp
+permalink: /services/
+---
+{%- for g in services %}
+<section class="band{% if loop.index is even %} band--mist{% endif %}">
+  <div class="wrap">
+    <h2 class="section-title section-title--left">{{ g.group }}</h2>
+    <div class="card-grid card-grid--4">
+      {%- for s in g.items %}
+      <a class="card card--link card--sm" href="{{ s.url }}">
+        <span class="card__img"><img src="/images/{{ s.image }}" alt="" loading="lazy" decoding="async"></span>
+        <span class="card__body"><h3>{{ s.label }}</h3></span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endfor %}
+<section class="band">
+  <div class="wrap">
+    <h2 class="section-title section-title--left">Other services</h2>
+    <ul class="other-services">
+      <li><strong>Emergency service, nights &amp; weekends.</strong> After-hours and weekend crews for wind and storm damage. <a href="/contact-us/">Contact us</a>.</li>
+      <li><strong>Copper fabrication &amp; forming.</strong> Through <a href="http://www.crescentcitycopper.com/" target="_blank" rel="noopener">Crescent City Copper</a>.</li>
+      <li><strong>Historic sheet metal restoration &amp; gilding.</strong> See <a href="/historic-roofing-new-orleans/">historic roofing in New Orleans</a>.</li>
+      <li><strong>Crane services.</strong> We own our cranes and lifting equipment.</li>
+      <li><strong>Dumpster services.</strong> 12, 16, 20 and 30 yard containers to meet the needs of every job.</li>
+    </ul>
+  </div>
+</section>
