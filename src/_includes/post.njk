@@ -5,7 +5,7 @@ layout: base.njk
   <div class="wrap wrap--narrow hero__in">
     <p class="crumbs"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/blog/">Blog</a></p>
     <h1>{{ title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | dateLong }}</time>{% if categories and categories.length %} · {{ categories | join(', ') }}{% endif %}</p>
+    {%- if categories and categories.length %}<p class="post-meta">{{ categories | join(', ') }}</p>{% endif %}
   </div>
 </section>
 <article class="wrap wrap--narrow prose post">

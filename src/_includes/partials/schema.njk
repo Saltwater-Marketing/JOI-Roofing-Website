@@ -15,7 +15,7 @@
   "address": { "@type": "PostalAddress", "streetAddress": "1109 Dealers Ave", "addressLocality": "New Orleans", "addressRegion": "LA", "postalCode": "70123", "addressCountry": "US" },
   "geo": { "@type": "GeoCoordinates", "latitude": 29.95779, "longitude": -90.190808 },
   "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "17:00" }],
-  "areaServed": ["New Orleans, LA", "Metairie, LA", "Kenner, LA", "Baton Rouge, LA", "Mandeville, LA", "Louisiana", "Mississippi", "Texas"],
+  "areaServed": ["New Orleans, LA", "Metairie, LA", "Kenner, LA", "Mandeville, LA", "Louisiana", "Mississippi", "Texas"],
   "sameAs": [site.social[0].url, site.social[1].url]
 } | json | safe }}</script>
 {%- elif layout == 'post.njk' %}
@@ -24,7 +24,6 @@
   "@type": "BlogPosting",
   "headline": title,
   "description": description,
-  "datePublished": page.date | isoDate,
   "image": (env.origin + "/images/" + image) if image else (env.origin + "/images/joi-logo.png"),
   "mainEntityOfPage": env.origin + page.url,
   "author": { "@type": "Organization", "name": site.name },

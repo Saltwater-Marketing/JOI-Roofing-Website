@@ -1,27 +1,78 @@
-<form class="form" name="estimate" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="company_website">
+{#- One estimate form used on Contact, Free Estimate and the metal roofing ad page.
+    Netlify Forms collects submissions ("estimate" in the Netlify Forms tab) and emails them
+    to whoever is listed under Site configuration > Notifications > Form submission notifications. -#}
+<form class="form" name="estimate" method="POST" action="/thank-you/" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="company_website">
   <input type="hidden" name="form-name" value="estimate">
+  <input type="hidden" name="subject" value="New estimate request from joiroofing.com">
   <input type="hidden" name="page" value="{{ page.url }}">
   <p class="hp"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
+
+  <fieldset class="form__group">
+    <legend>Property type</legend>
+    <div class="pills">
+      <label class="pill"><input type="radio" name="property_type" value="Commercial" required><span>Commercial</span></label>
+      <label class="pill"><input type="radio" name="property_type" value="Residential"><span>Residential</span></label>
+      <label class="pill"><input type="radio" name="property_type" value="Multi-family / HOA"><span>Multi-family / HOA</span></label>
+    </div>
+  </fieldset>
+
+  <div class="form__row">
+    <label>What do you need?
+      <select name="service" required>
+        <option value="">Choose one</option>
+        <option>Roof repair or leak</option>
+        <option>Roof replacement</option>
+        <option>New roof (new construction)</option>
+        <option>Storm or emergency damage</option>
+        <option>Inspection or maintenance</option>
+        <option>Roof coating</option>
+        <option>Sheet metal fabrication</option>
+        <option>Something else</option>
+      </select>
+    </label>
+    <label>Roof type <span class="opt">(if you know it)</span>
+      <select name="roof_type">
+        <option>Not sure</option>
+        <option>Flat / low-slope (TPO, BUR, modified bitumen)</option>
+        <option>Metal</option>
+        <option>Asphalt shingle</option>
+        <option>Slate</option>
+        <option>Tile</option>
+      </select>
+    </label>
+  </div>
+
   <div class="form__row">
     <label>Name<input name="name" autocomplete="name" required></label>
-    <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+    <label>Company <span class="opt">(optional)</span><input name="company" autocomplete="organization"></label>
   </div>
   <div class="form__row">
+    <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
     <label>Email<input name="email" type="email" autocomplete="email" required></label>
-    <label>Property address or ZIP<input name="address" autocomplete="street-address"></label>
   </div>
-  <label>What do you need?
-    <select name="project_type">
-      <option>Commercial roofing</option>
-      <option>Residential roofing</option>
-      <option>Roof repair or leak</option>
-      <option>Storm or emergency damage</option>
-      <option>Inspection or maintenance</option>
-      <option>Sheet metal fabrication</option>
-      <option>Something else</option>
-    </select>
-  </label>
-  <label>Tell us about the project<textarea name="message" rows="5"></textarea></label>
-  <button class="btn btn--block" type="submit">Request my free estimate</button>
-  <p class="form__note">We reply during business hours ({{ site.hours }}). For a leak or storm damage, call <a href="{{ site.phoneHref }}">{{ site.phone }}</a>.</p>
+  <label>Property address<input name="address" autocomplete="street-address" placeholder="Street, city, ZIP"></label>
+
+  <div class="form__row">
+    <label>Timeline
+      <select name="timeline">
+        <option>As soon as possible</option>
+        <option>Within 1–3 months</option>
+        <option>Planning or budgeting</option>
+      </select>
+    </label>
+    <fieldset class="form__group">
+      <legend>Best way to reach you</legend>
+      <div class="pills">
+        <label class="pill"><input type="radio" name="contact_method" value="Call" checked><span>Call</span></label>
+        <label class="pill"><input type="radio" name="contact_method" value="Text"><span>Text</span></label>
+        <label class="pill"><input type="radio" name="contact_method" value="Email"><span>Email</span></label>
+      </div>
+    </fieldset>
+  </div>
+
+  <label>Tell us about the project<textarea name="message" rows="4" placeholder="Where is the leak or damage? Roughly how big is the roof? Anything else we should know?"></textarea></label>
+  <label>Photo of the roof or damage <span class="opt">(optional, up to 8 MB)</span><input type="file" name="photo" accept="image/*"></label>
+
+  <button class="btn btn--block btn--lg" type="submit">Request my free estimate</button>
+  <p class="form__note">We reply during business hours ({{ site.hours }}). For an active leak or storm damage, call <a href="{{ site.phoneHref }}">{{ site.phone }}</a>.</p>
 </form>
