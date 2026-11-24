@@ -1,5 +1,28 @@
 [
  {
+  "url": "/gallery/audubon-zoo/",
+  "slug": "audubon-zoo",
+  "name": "Audubon Zoo",
+  "title": "Audubon Zoo",
+  "thumb": {
+   "file": "audubon-zoo-clay-tile-roof.webp",
+   "w": 1500,
+   "h": 1125
+  },
+  "images": [
+   {
+    "file": "audubon-zoo-clay-tile-roof.webp",
+    "w": 1500,
+    "h": 1125
+   },
+   {
+    "file": "audubon-zoo-aerial.webp",
+    "w": 1500,
+    "h": 1125
+   }
+  ]
+ },
+ {
   "url": "/gallery/214-delta/",
   "slug": "214-delta",
   "name": "214 Delta",
