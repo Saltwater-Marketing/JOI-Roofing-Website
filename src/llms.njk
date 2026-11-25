@@ -1,0 +1,37 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ site.name | safe }}
+
+> {{ site.name | safe }} ({{ site.shortName | safe }}) is a licensed commercial and residential roofing contractor in New Orleans, Louisiana, in business since {{ site.founded | safe }}. Serving {{ site.serviceArea | safe }}.
+
+- Phone: {{ site.phone | safe }}
+- Email: {{ site.email | safe }}
+- Hours: {{ site.hours | safe }}
+{%- for o in site.offices %}
+- {{ o.name | safe }}: {{ o.street | safe }}, {{ o.city | safe }}, {{ o.state | safe }} {{ o.zip | safe }} ({{ o.phone | safe }})
+{%- endfor %}
+- Free estimate: {{ site.url | safe }}/free-estimate/
+
+## Main pages
+
+- [Home]({{ site.url | safe }}/): overview of JOI Roofing's commercial and residential roofing work
+- [All services]({{ site.url | safe }}/services/): every roofing service in one list
+- [Project gallery]({{ site.url | safe }}/gallery/): photos of completed roofing projects
+- [About us]({{ site.url | safe }}/about-us/): company history and team
+- [Testimonials]({{ site.url | safe }}/about-us/testimonials/): what customers say
+- [Contact]({{ site.url | safe }}/contact-us/): offices, phone numbers and directions
+{%- for g in services %}
+
+## {{ g.group | safe }}
+{% for i in g.items %}
+- [{{ i.label | safe }}]({{ site.url | safe }}{{ i.url | safe }}): {{ i.blurb | safe }}
+{%- endfor %}
+{%- endfor %}
+
+## Articles
+
+{%- for p in collections.posts %}
+- [{{ p.data.title | safe }}]({{ site.url | safe }}{{ p.url | safe }}): {{ p.data.description | safe }}
+{%- endfor %}
